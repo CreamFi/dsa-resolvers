@@ -7,7 +7,7 @@ interface CTokenInterface {
     function supplyRatePerBlock() external view returns (uint);
     function borrowBalanceStored(address) external view returns (uint);
     function totalBorrows() external view returns (uint);
-    
+
     function underlying() external view returns (address);
     function balanceOf(address) external view returns (uint);
 }
@@ -78,7 +78,7 @@ contract Helpers is DSMath {
      * @dev get Compound Comptroller
      */
     function getComptroller() public pure returns (ComptrollerLensInterface) {
-        return ComptrollerLensInterface(0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B);
+        return ComptrollerLensInterface(0x3d5BC3c8d13dcB8bF317092d84783c2697AE9258);
     }
 
     /**
@@ -92,21 +92,21 @@ contract Helpers is DSMath {
      * @dev get Comp Read Address
      */
     function getCompReadAddress() public pure returns (address) {
-        return 0xd513d22422a3062Bd342Ae374b4b9c20E0a9a074;
+        return 0xd400e22dcA840CC7E342DF1d9945684bBd587659;
     }
 
     /**
      * @dev get ETH Address
      */
     function getCETHAddress() public pure returns (address) {
-        return 0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5;
+        return 0xD06527D5e56A3495252A528C4987003b712860eE;
     }
 
     /**
      * @dev get Comp Token Address
      */
     function getCompToken() public pure returns (TokenInterface) {
-        return TokenInterface(0xc00e94Cb662C3520282E6f5717214004A7f26888);
+        return TokenInterface(0x2ba592F78dB6436527729929AAf6c908497cB200);
     }
 
 
@@ -183,6 +183,6 @@ contract Resolver is Helpers {
 }
 
 
-contract InstaCompoundResolver is Resolver {
-    string public constant name = "Compound-Resolver-v1.3";
+contract InstaCreamResolver is Resolver {
+    string public constant name = "Cream-Resolver-v1.3";
 }
